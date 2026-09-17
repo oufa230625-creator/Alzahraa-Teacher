@@ -210,25 +210,6 @@
         .result-card h3 { font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
         .result-card p { font-size:0.85rem; color:var(--text-light); }
 
-        /* REVIEWS */
-        .reviews-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
-        .review-card {
-            background:var(--white); border:2px solid var(--gray-200); border-radius:var(--radius-lg);
-            padding:28px; transition:var(--transition);
-        }
-        .review-card:hover { border-color:var(--teal); }
-        .review-stars { color:var(--gold); font-size:0.9rem; margin-bottom:12px; }
-        .review-text { font-size:0.95rem; color:var(--text-dark); margin-bottom:16px; font-style:italic; }
-        .review-author { display:flex; align-items:center; gap:12px; }
-        .review-avatar {
-            width:44px; height:44px; border-radius:50%; background:var(--teal);
-            color:var(--white); display:flex; align-items:center; justify-content:center;
-            font-weight:700; font-size:1rem;
-        }
-        .review-name { font-weight:600; font-size:0.9rem; }
-        .review-meta { font-size:0.8rem; color:var(--gray-500); }
-        .review-verified { display:inline-flex; align-items:center; gap:4px; color:var(--teal); font-size:0.75rem; font-weight:600; }
-
         /* PRICING */
         .pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
         .pricing-card {
@@ -357,7 +338,6 @@
             .methods-grid { grid-template-columns:1fr; }
             .lessons-grid { grid-template-columns:1fr; }
             .results-grid { grid-template-columns:1fr; }
-            .reviews-grid { grid-template-columns:1fr; }
             .trial-steps { grid-template-columns:1fr 1fr; }
             .trust-items { gap:20px; }
             .footer-grid { grid-template-columns:1fr; gap:24px; }
@@ -676,73 +656,7 @@
     </div>
 </section>
 
-<!-- 8. REVIEWS -->
-<section class="section" id="reviews" style="background:var(--gray-100);">
-    <div class="container">
-        <h2 class="section-title" data-i18n="reviews_title">What Students Say</h2>
-        <p class="section-subtitle" data-i18n="reviews_subtitle">Verified reviews from students around the world.</p>
-        <div class="reviews-grid">
-            <div class="review-card fade-in">
-                <div>
-                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="review-text" data-i18n="rev1_text">"Al-Zahraa makes learning Arabic so fun! The games and interactive activities keep me engaged. I've learned more in 3 months than I did in a year of self-study."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">S</div>
-                        <div>
-                            <div class="review-name">Sarah M.</div>
-                            <div class="review-meta" data-i18n="rev1_meta">United States — Learning Arabic</div>
-                            <span class="review-verified"><i class="fas fa-check-circle"></i> <span data-i18n="verified">Verified Student</span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card fade-in">
-                <div>
-                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="review-text" data-i18n="rev2_text">"The best Arabic teacher I've found! Patient, creative, and really knows how to explain things. My Quran recitation has improved so much."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">A</div>
-                        <div>
-                            <div class="review-name">Ahmed K.</div>
-                            <div class="review-meta" data-i18n="rev2_meta">Canada — Quran & Tajweed</div>
-                            <span class="review-verified"><i class="fas fa-check-circle"></i> <span data-i18n="verified">Verified Student</span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card fade-in">
-                <div>
-                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="review-text" data-i18n="rev3_text">"My daughter loves her Arabic lessons! The games keep her excited and she's learning so fast. Best investment in her education."</p>
-                    <div class="review-author">
-                        <div class="review-avatar">F</div>
-                        <div>
-                            <div class="review-name">Fatima R.</div>
-                            <div class="review-meta" data-i18n="rev3_meta">Germany — Arabic for Kids</div>
-                            <span class="review-verified"><i class="fas fa-check-circle"></i> <span data-i18n="verified">Verified Parent</span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="review-card fade-in">
-                <div>
-                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="review-text" data-i18n="rev4_text">"I started as a complete beginner and now I can read Arabic and hold basic conversations. The visual methods really work!"</p>
-                    <div class="review-author">
-                        <div class="review-avatar">M</div>
-                        <div>
-                            <div class="review-name">Michael T.</div>
-                            <div class="review-meta" data-i18n="rev4_meta">UK — Arabic for Beginners</div>
-                            <span class="review-verified"><i class="fas fa-check-circle"></i> <span data-i18n="verified">Verified Student</span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 9. PRICING -->
+<!-- 8. PRICING -->
 <section class="section" id="pricing">
     <div class="container">
         <h2 class="section-title" data-i18n="pricing_title">Simple, Transparent Pricing</h2>
@@ -1007,17 +921,6 @@ const translations = {
         res2_title: "Read the Quran", res2_desc: "Students learn to read Arabic script fluently and recite with proper Tajweed.",
         res3_title: "Remember Vocabulary", res3_desc: "Interactive games and spaced repetition help words stick long-term.",
         res4_title: "Build Confidence", res4_desc: "Students overcome fear of speaking and start enjoying Arabic.",
-        reviews_title: "What Students Say",
-        reviews_subtitle: "Verified reviews from students around the world.",
-        rev1_text: '"Al-Zahraa makes learning Arabic so fun! The games and interactive activities keep me engaged. I\'ve learned more in 3 months than I did in a year of self-study."',
-        rev1_meta: "United States — Learning Arabic",
-        rev2_text: '"The best Arabic teacher I\'ve found! Patient, creative, and really knows how to explain things. My Quran recitation has improved so much."',
-        rev2_meta: "Canada — Quran & Tajweed",
-        rev3_text: '"My daughter loves her Arabic lessons! The games keep her excited and she\'s learning so fast. Best investment in her education."',
-        rev3_meta: "Germany — Arabic for Kids",
-        rev4_text: '"I started as a complete beginner and now I can read Arabic and hold basic conversations. The visual methods really work!"',
-        rev4_meta: "UK — Arabic for Beginners",
-        verified: "Verified Student",
         pricing_title: "Simple, Transparent Pricing",
         pricing_subtitle: "Start with a free trial. No commitments.",
         p1_title: "Free Trial", p1_sub: "30 minutes — No cost", p1_price: "FREE", p1_note: "One-time only",
@@ -1103,20 +1006,9 @@ const translations = {
         results_title: "ما يحققه طلابي",
         results_subtitle: "نتائج حقيقية من طلاب حقيقيين — هذا ما يمكنك تحقيقه.",
         res1_title: "محادثات يومية", res1_desc: "خلال 8-12 أسبوع، يتمكن الطالب من إجراء محادثات يومية باللغة العربية.",
-        res2_title: "قراءة القرآن الكريم", res2_desc: "يتعلم الطلاب قراءة ونطق الحروف العربية  بطلاقة وترتيل القرآن الكريم بتجويد صحيح.",
+        res2_title: "قراءة القرآن الكريم", res2_desc: "يتعلم الطلاب قراءة الخط العربي بطلاقة وترتيل القرآن الكريم بتجويد صحيح.",
         res3_title: "تذكر المفردات", res3_desc: "الألعاب التفاعلية والتكرار المتباعد يساعدان على تثبيت المفردات على المدى الطويل.",
         res4_title: "بناء الثقة", res4_desc: "يتغلب الطلاب على خوف التحدث ويبدأون في الاستمتاع باللغة العربية.",
-        reviews_title: "ماذا يقولون الطلاب؟",
-        reviews_subtitle: "تقييمات موثقة من طلاب حول العالم.",
-        rev1_text: '"الزهراء تجعل تعلم اللغة العربية ممتعًا جدًا! الألعاب والأنشطة التفاعلية تبقيني منكبًا. تعلمت في 3 أشهر أكثر مما تعلمت في سنة من الدراسة الذاتية."',
-        rev1_meta: "الولايات المتحدة — تعلم اللغة العربية",
-        rev2_text: '"أفضل معلمة عربية لقيتها! صبورة، مبدعة، وتعرف كيف تشرح الأمور. ترتيلي للقرآن الكريم تحسن كثيرًا."',
-        rev2_meta: "كندا — القرآن الكريم والتجويد",
-        rev3_text: '"ابنتي تحب دروس اللغة العربية! الألعاب تُبقيها متحمسة وهي تتعلم بسرعة. أفضل استثمار في تعليمها."',
-        rev3_meta: "ألمانيا — العربية للأطفال",
-        rev4_text: '"بدأت مبتدئ تام والآن أقرأ اللغة العربية وأُجري محادثات أساسية. الأساليب البصرية فعلاً نجحت!"',
-        rev4_meta: "بريطانيا — العربية للمبتدئين",
-        verified: "طالب موثق",
         pricing_title: "أسعار بسيطة وواضحة",
         pricing_subtitle: "ابدأ بدرس تجريبي مجاني. بدون التزامات.",
         p1_title: "درس تجريبي", p1_sub: "30 دقيقة — بدون تكلفة", p1_price: "مجاني", p1_note: "مرة واحدة فقط",
@@ -1205,17 +1097,6 @@ const translations = {
         res2_title: "Lire le Coran", res2_desc: "Les élèves apprennent à lire l'arabe couramment et à réciter avec un Tajweed correct.",
         res3_title: "Retenir le vocabulaire", res3_desc: "Jeux interactifs et répétition espacée pour ancrer les mots à long terme.",
         res4_title: "Confiance en soi", res4_desc: "Les élèves surmontent la peur de parler et commencent à apprécier l'arabe.",
-        reviews_title: "Ce que disent les élèves",
-        reviews_subtitle: "Avis vérifiés d'élèves du monde entier.",
-        rev1_text: '"Al-Zahraa rend l\'apprentissage de l\'arabe tellement amusant ! Les jeux et activités interactives me maintiennent engagée. J\'ai appris plus en 3 mois qu\'en une année d\'étude autonome."',
-        rev1_meta: "États-Unis — Apprentissage de l'arabe",
-        rev2_text: '"La meilleure enseignante d\'arabe que j\'ai trouvée ! Patiente, créative et sait vraiment comment expliquer les choses. Ma récitation du Coran s\'est tellement améliorée."',
-        rev2_meta: "Canada — Coran et Tajweed",
-        rev3_text: '"Ma fille adore ses cours d\'arabe ! Les jeux la gardent enthousiaste et elle apprend si vite. Le meilleur investissement dans son éducation."',
-        rev3_meta: "Allemagne — Arabe pour enfants",
-        rev4_text: '"J\'ai commencé en tant que débutant complet et maintenant je peux lire l\'arabe et tenir des conversations de base. Les méthodes visuelles fonctionnent vraiment !"',
-        rev4_meta: "Royaume-Uni — Arabe pour débutants",
-        verified: "Élève vérifié",
         pricing_title: "Tarifs simples et transparents",
         pricing_subtitle: "Commencez par un essai gratuit. Sans engagement.",
         p1_title: "Essai gratuit", p1_sub: "30 minutes — Gratuit", p1_price: "GRATUIT", p1_note: "Une seule fois",
