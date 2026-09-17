@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online Arabic Teacher — Al-Zahraa Saeed. Arabic for Beginners, Quran & Tajweed, Arabic for Kids. Interactive Zoom lessons with certified teacher. Book your free trial today.">
+    <meta name="keywords" content="Online Arabic Teacher, Arabic for Beginners, Quran Teacher, Tajweed Teacher, Arabic for Kids, Learn Arabic Online, Arabic Lessons, Quran Lessons">
+    <title>Al-Zahraa Saeed | Online Arabic & Quran Teacher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --navy: #1B2A4A;
+            --teal: #2D8B7A;
+            --teal-light: #3AA897;
+            --gold: #E8A838;
+            --gold-hover: #D4952E;
+            --cream: #FDF8F3;
+            --white: #FFFFFF;
+            --gray-100: #F7F9FC;
+            --gray-200: #E8ECF1;
+            --gray-500: #6B7B8D;
+            --gray-700: #3D4F5F;
+            --text-dark: #1A2332;
+            --text-light: #5A6B7D;
+            --shadow-sm: 0 2px 8px rgba(27,42,74,0.08);
+            --shadow-md: 0 4px 20px rgba(27,42,74,0.12);
+            --shadow-lg: 0 8px 40px rgba(27,42,74,0.16);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.3s ease;
+        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family:'Inter',sans-serif;
+            color:var(--text-dark);
+            background:var(--white);
+            line-height:1.7;
+            overflow-x:hidden;
+        }
+        .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+        .section { padding:80px 0; }
+        .section-title { font-size:2rem; font-weight:800; text-align:center; margin-bottom:8px; color:var(--navy); }
+        .section-subtitle { font-size:1.05rem; text-align:center; color:var(--text-light); max-width:640px; margin:0 auto 48px; }
+        .btn {
+            display:inline-flex; align-items:center; gap:8px; padding:14px 28px;
+            border-radius:var(--radius-md); font-weight:600; font-size:0.95rem;
+            text-decoration:none; border:none; cursor:pointer; transition:var(--transition);
+        }
+        .btn-primary { background:var(--gold); color:var(--navy); }
+        .btn-primary:hover { background:var(--gold-hover); transform:translateY(-2px); box-shadow:var(--shadow-md); }
+        .btn-secondary { background:transparent; color:var(--teal); border:2px solid var(--teal); }
+        .btn-secondary:hover { background:var(--teal); color:var(--white); }
+        .btn-small { padding:10px 20px; font-size:0.875rem; }
+        .badge {
+            display:inline-block; background:rgba(45,139,122,0.1); color:var(--teal);
+            padding:6px 14px; border-radius:50px; font-size:0.8rem; font-weight:600;
+        }
+        h2.section-title .highlight { color:var(--teal); }
+
+        /* NAVBAR */
+        .navbar {
+            position:fixed; top:0; left:0; right:0; z-index:1000;
+            background:rgba(255,255,255,0.95); backdrop-filter:blur(10px);
+            border-bottom:1px solid var(--gray-200); transition:var(--transition);
+        }
+        .nav-content {
+            max-width:1200px; margin:0 auto; padding:0 24px;
+            display:flex; align-items:center; justify-content:space-between; height:70px;
+        }
+        .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+        .logo-icon {
+            width:40px; height:40px; background:var(--teal); border-radius:var(--radius-sm);
+            display:flex; align-items:center; justify-content:center; color:var(--white); font-size:1.1rem;
+        }
+        .logo-text { font-size:1.3rem; font-weight:800; color:var(--navy); }
+        .logo-text span { color:var(--teal); }
+        .logo-subtitle { font-size:0.7rem; color:var(--gray-500); display:block; margin-top:-2px; }
+        .nav-links { display:flex; align-items:center; gap:28px; list-style:none; }
+        .nav-links a { text-decoration:none; color:var(--gray-700); font-size:0.9rem; font-weight:500; transition:var(--transition); }
+        .nav-links a:hover { color:var(--teal); }
+        .nav-cta { background:transparent !important; color:var(--teal) !important; padding:8px 18px; border-radius:var(--radius-sm); font-weight:600 !important; border:2px solid var(--teal) !important; }
+        .nav-cta:hover { background:var(--teal) !important; color:var(--white) !important; }
+        .lang-switcher { display:flex; gap:4px; }
+        .lang-btn {
+            padding:6px 12px; border:1px solid var(--gray-200); border-radius:var(--radius-sm);
+            background:transparent; cursor:pointer; font-size:0.8rem; font-weight:500;
+            color:var(--gray-500); transition:var(--transition);
+        }
+        .lang-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+        .mobile-toggle { display:none; background:none; border:none; font-size:1.4rem; color:var(--navy); cursor:pointer; }
+
+        /* HERO */
+        .hero {
+            padding:120px 0 80px; background:linear-gradient(135deg,var(--cream) 0%,var(--white) 100%);
+        }
+        .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+        .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(45,139,122,0.18); padding:8px 16px; border-radius:50px; font-size:0.85rem; font-weight:600; color:#1a6b5d; margin-bottom:20px; }
+        .hero-title { font-size:2.8rem; font-weight:800; line-height:1.15; color:var(--navy); margin-bottom:16px; }
+        .hero-title .highlight { color:var(--teal); }
+        .hero-desc { font-size:1.05rem; color:var(--text-light); margin-bottom:28px; max-width:520px; }
+        .hero-buttons { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:32px; }
+        .hero-stats { display:flex; gap:32px; }
+        .stat-item { text-align:center; }
+        .stat-number { font-size:1.5rem; font-weight:800; color:var(--teal); }
+        .stat-label { font-size:0.8rem; color:var(--gray-500); }
+        .hero-image { position:relative; }
+        .hero-img-wrapper {
+            width:100%; aspect-ratio:4/5; border-radius:var(--radius-lg); overflow:hidden;
+            background:var(--gray-100); box-shadow:var(--shadow-lg);
+        }
+        .hero-img-wrapper img { width:100%; height:100%; object-fit:cover; display:block; }
+        .hero-float {
+            position:absolute; background:var(--white); border-radius:var(--radius-md);
+            padding:12px 16px; box-shadow:var(--shadow-md); display:flex; align-items:center; gap:10px;
+            font-size:0.85rem; font-weight:600;
+        }
+        .hero-float i { font-size:1.2rem; }
+        .hero-float.f1 { bottom:20%; left:-20px; }
+        .hero-float.f2 { top:20%; right:-20px; }
+
+        /* TRUST BAR */
+        .trust-bar {
+            background:var(--navy); padding:20px 0; text-align:center;
+        }
+        .trust-items { display:flex; justify-content:center; align-items:center; gap:40px; flex-wrap:wrap; }
+        .trust-item { display:flex; align-items:center; gap:8px; color:var(--white); font-size:0.9rem; }
+        .trust-item i { color:var(--gold); font-size:1.1rem; }
+
+        /* WHO IS IT FOR */
+        .audience-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+        .audience-card {
+            background:var(--gray-100); border-radius:var(--radius-md); padding:28px 24px;
+            text-align:center; transition:var(--transition); border:2px solid transparent;
+        }
+        .audience-card:hover { border-color:var(--teal); transform:translateY(-4px); box-shadow:var(--shadow-md); }
+        .audience-card i { font-size:2rem; color:var(--teal); margin-bottom:12px; }
+        .audience-card h3 { font-size:1.05rem; font-weight:700; margin-bottom:6px; color:var(--navy); }
+        .audience-card p { font-size:0.85rem; color:var(--text-light); }
+
+        /* WHAT CAN YOU LEARN */
+        .services-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+        .service-card {
+            background:var(--white); border:2px solid var(--gray-200); border-radius:var(--radius-lg);
+            padding:32px; transition:var(--transition); position:relative; overflow:hidden;
+        }
+        .service-card:hover { border-color:var(--teal); box-shadow:var(--shadow-md); }
+        .service-card .service-icon {
+            width:56px; height:56px; background:rgba(45,139,122,0.1); border-radius:var(--radius-md);
+            display:flex; align-items:center; justify-content:center; font-size:1.5rem; color:var(--teal);
+            margin-bottom:16px;
+        }
+        .service-card h3 { font-size:1.15rem; font-weight:700; color:var(--navy); margin-bottom:8px; }
+        .service-card p { font-size:0.9rem; color:var(--text-light); margin-bottom:16px; }
+        .service-tags { display:flex; gap:8px; flex-wrap:wrap; }
+        .service-tag {
+            background:var(--gray-100); padding:4px 12px; border-radius:50px;
+            font-size:0.75rem; font-weight:500; color:var(--gray-700);
+        }
+
+        /* HOW I TEACH */
+        .methods-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+        .method-card {
+            background:var(--gray-100); border-radius:var(--radius-lg); padding:32px;
+            text-align:center; transition:var(--transition);
+        }
+        .method-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+        .method-card .method-icon {
+            width:64px; height:64px; background:var(--white); border-radius:50%;
+            display:flex; align-items:center; justify-content:center; font-size:1.5rem;
+            color:var(--teal); margin:0 auto 16px; box-shadow:var(--shadow-sm);
+        }
+        .method-card h3 { font-size:1.05rem; font-weight:700; color:var(--navy); margin-bottom:8px; }
+        .method-card p { font-size:0.85rem; color:var(--text-light); }
+        .method-tag {
+            display:inline-block; margin-top:12px; background:rgba(45,139,122,0.1);
+            color:var(--teal); padding:4px 12px; border-radius:50px; font-size:0.75rem; font-weight:600;
+        }
+
+        /* INSIDE LESSONS */
+        .lessons-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+        .lesson-card {
+            background:var(--gray-100); border-radius:var(--radius-lg); overflow:hidden;
+            transition:var(--transition);
+        }
+        .lesson-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+        .lesson-card .lesson-img {
+            width:100%; height:200px; object-fit:cover; display:block;
+        }
+        .lesson-card .lesson-body { padding:20px; }
+        .lesson-card h3 { font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:6px; }
+        .lesson-card p { font-size:0.85rem; color:var(--text-light); }
+
+        /* STUDENT RESULTS */
+        .results-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+        .result-card {
+            background:var(--white); border:2px solid var(--gray-200); border-radius:var(--radius-lg);
+            padding:28px; display:flex; gap:16px; align-items:flex-start; transition:var(--transition);
+        }
+        .result-card:hover { border-color:var(--teal); }
+        .result-card .result-icon {
+            width:48px; height:48px; min-width:48px; background:rgba(45,139,122,0.1);
+            border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center;
+            color:var(--teal); font-size:1.2rem;
+        }
+        .result-card h3 { font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
+        .result-card p { font-size:0.85rem; color:var(--text-light); }
+
+        /* REVIEWS */
+        .reviews-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+        .review-card {
+            background:var(--white); border:2px solid var(--gray-200); border-radius:var(--radius-lg);
+            padding:28px; transition:var(--transition);
+        }
+        .review-card:hover { border-color:var(--teal); }
+        .review-stars { color:var(--gold); font-size:0.9rem; margin-bottom:12px; }
+        .review-text { font-size:0.95rem; color:var(--text-dark); margin-bottom:16px; font-style:italic; }
+        .review-author { display:flex; align-items:center; gap:12px; }
+        .review-avatar {
+            width:44px; height:44px; border-radius:50%; background:var(--teal);
+            color:var(--white); display:flex; align-items:center; justify-content:center;
+            font-weight:700; font-size:1rem;
+        }
+        .review-name { font-weight:600; font-size:0.9rem; }
+        .review-meta { font-size:0.8rem; color:var(--gray-500); }
+        .review-verified { display:inline-flex; align-items:center; gap:4px; color:var(--teal); font-size:0.75rem; font-weight:600; }
+
+        /* PRICING */
+        .pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+        .pricing-card {
+            background:var(--white); border:2px solid var(--gray-200); border-radius:var(--radius-lg);
+            padding:32px; text-align:center; transition:var(--transition); position:relative;
+        }
+        .pricing-card.popular { border-color:var(--teal); box-shadow:var(--shadow-md); }
+        .pricing-card .badge-popular {
+            position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+            background:var(--teal); color:var(--white); padding:4px 16px; border-radius:50px;
+            font-size:0.75rem; font-weight:700;
+        }
+        .pricing-card h3 { font-size:1.15rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
+        .pricing-card .pricing-sub { font-size:0.85rem; color:var(--text-light); margin-bottom:16px; }
+        .pricing-card .price { font-size:2rem; font-weight:800; color:var(--teal); margin-bottom:4px; }
+        .pricing-card .price-note { font-size:0.8rem; color:var(--gray-500); margin-bottom:20px; }
+        .pricing-features { list-style:none; text-align:left; margin-bottom:24px; }
+        .pricing-features li {
+            padding:8px 0; border-bottom:1px solid var(--gray-100); font-size:0.85rem;
+            color:var(--gray-700); display:flex; align-items:center; gap:8px;
+        }
+        .pricing-features li i { color:var(--teal); font-size:0.8rem; }
+
+        /* FREE TRIAL PROCESS */
+        .trial-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+        .trial-step {
+            text-align:center; position:relative; padding:0 16px;
+        }
+        .trial-step .step-number {
+            width:48px; height:48px; background:var(--teal); color:var(--white);
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            font-weight:700; font-size:1.1rem; margin:0 auto 16px;
+        }
+        .trial-step h4 { font-size:0.95rem; font-weight:700; color:var(--navy); margin-bottom:6px; }
+        .trial-step p { font-size:0.8rem; color:var(--text-light); }
+
+        /* FAQ */
+        .faq-list { max-width:720px; margin:0 auto; }
+        .faq-item {
+            border:1px solid var(--gray-200); border-radius:var(--radius-md); margin-bottom:12px;
+            overflow:hidden; transition:var(--transition);
+        }
+        .faq-item.active { border-color:var(--teal); }
+        .faq-question {
+            width:100%; padding:18px 24px; background:var(--white); border:none; cursor:pointer;
+            display:flex; justify-content:space-between; align-items:center; font-size:0.95rem;
+            font-weight:600; color:var(--navy); text-align:left;
+        }
+        .faq-question i { transition:var(--transition); color:var(--gray-500); }
+        .faq-item.active .faq-question i { transform:rotate(180deg); color:var(--teal); }
+        .faq-answer {
+            max-height:0; overflow:hidden; transition:max-height 0.3s ease;
+        }
+        .faq-answer-content { padding:0 24px 18px; font-size:0.9rem; color:var(--text-light); line-height:1.7; }
+
+        /* FINAL CTA */
+        .final-cta {
+            background:linear-gradient(135deg,var(--navy) 0%,#2C3E5A 100%);
+            padding:80px 0; text-align:center; color:var(--white);
+        }
+        .final-cta h2 { font-size:2rem; font-weight:800; margin-bottom:12px; }
+        .final-cta p { font-size:1.05rem; opacity:0.8; margin-bottom:28px; max-width:500px; margin-left:auto; margin-right:auto; }
+
+        /* FOOTER */
+        .footer { background:var(--gray-100); padding:40px 0 24px; }
+        .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:32px; }
+        .footer-brand .logo-text { font-size:1.2rem; margin-bottom:8px; }
+        .footer-brand p { font-size:0.85rem; color:var(--text-light); }
+        .footer-col h4 { font-size:0.85rem; font-weight:700; color:var(--navy); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.5px; }
+        .footer-col ul { list-style:none; }
+        .footer-col ul li { margin-bottom:8px; }
+        .footer-col ul a { text-decoration:none; color:var(--text-light); font-size:0.85rem; transition:var(--transition); }
+        .footer-col ul a:hover { color:var(--teal); }
+        .footer-bottom {
+            border-top:1px solid var(--gray-200); padding-top:20px; text-align:center;
+            font-size:0.8rem; color:var(--gray-500);
+        }
+        .social-links { display:flex; gap:12px; margin-top:12px; }
+        .social-link {
+            width:36px; height:36px; border-radius:50%; background:var(--gray-200);
+            display:flex; align-items:center; justify-content:center; color:var(--gray-700);
+            text-decoration:none; transition:var(--transition); font-size:0.9rem;
+        }
+        .social-link:hover { background:var(--teal); color:var(--white); }
+
+        /* WHATSAPP */
+        .whatsapp-float {
+            position:fixed; bottom:24px; left:24px; z-index:999;
+            width:56px; height:56px; background:#25D366; color:var(--white);
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            font-size:1.6rem; text-decoration:none; box-shadow:var(--shadow-md);
+            transition:var(--transition);
+        }
+        .whatsapp-float:hover { transform:scale(1.1); }
+
+        /* MOBILE NAV */
+        .mobile-nav {
+            display:none; position:fixed; top:70px; left:0; right:0; background:var(--white);
+            border-bottom:1px solid var(--gray-200); padding:16px 24px; z-index:999;
+            box-shadow:var(--shadow-md);
+        }
+        .mobile-nav.active { display:block; }
+        .mobile-nav ul { list-style:none; }
+        .mobile-nav ul li { margin-bottom:8px; }
+        .mobile-nav ul a { text-decoration:none; color:var(--navy); font-size:1rem; font-weight:500; display:block; padding:8px 0; }
+        .mobile-nav .lang-switcher { margin-top:12px; display:flex; gap:8px; }
+
+        /* RESPONSIVE */
+        @media(max-width:1024px) {
+            .hero-grid { grid-template-columns:1fr; gap:40px; }
+            .hero-image { max-width:400px; margin:0 auto; }
+            .hero-title { font-size:2.2rem; }
+            .pricing-grid { grid-template-columns:1fr; max-width:400px; margin:0 auto; }
+            .footer-grid { grid-template-columns:1fr 1fr; }
+        }
+        @media(max-width:768px) {
+            .nav-links, .lang-switcher { display:none; }
+            .mobile-toggle { display:block; }
+            .section { padding:60px 0; }
+            .section-title { font-size:1.6rem; }
+            .hero { padding:100px 0 60px; }
+            .hero-title { font-size:1.8rem; }
+            .hero-stats { gap:20px; }
+            .audience-grid { grid-template-columns:1fr 1fr; }
+            .services-grid { grid-template-columns:1fr; }
+            .methods-grid { grid-template-columns:1fr; }
+            .lessons-grid { grid-template-columns:1fr; }
+            .results-grid { grid-template-columns:1fr; }
+            .reviews-grid { grid-template-columns:1fr; }
+            .trial-steps { grid-template-columns:1fr 1fr; }
+            .trust-items { gap:20px; }
+            .footer-grid { grid-template-columns:1fr; gap:24px; }
+        }
+        @media(max-width:480px) {
+            .hero-title { font-size:1.5rem; }
+            .hero-buttons { flex-direction:column; }
+            .hero-buttons .btn { width:100%; justify-content:center; }
+            .audience-grid { grid-template-columns:1fr; }
+            .trial-steps { grid-template-columns:1fr; }
+            .hero-float { display:none; }
+        }
+
+        /* ANIMATIONS - reduced */
+        .fade-in { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity:1; transform:translateY(0); }
+
+        html[dir="rtl"] body { font-family:'Noto Sans Arabic','Inter',sans-serif; }
+        html[dir="rtl"] .faq-question { text-align:right; }
+        html[dir="rtl"] .pricing-features li { justify-content:flex-end; }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-content">
+        <a href="#" class="nav-logo">
+            <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+            <div>
+                <span class="logo-text">Al-<span>Zahraa</span></span>
+                <span class="logo-subtitle" data-i18n="logo_subtitle">Arabic Teacher</span>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about" data-i18n="nav_about">About</a></li>
+            <li><a href="#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="#methods" data-i18n="nav_methods">Methods</a></li>
+            <li><a href="#lessons" data-i18n="nav_lessons">Lessons</a></li>
+            <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
+            <li><a href="#trial" class="nav-cta" data-i18n="nav_cta">Book Free Trial</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')">عربي</button>
+            <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileNav()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+    <ul>
+        <li><a href="#about" onclick="toggleMobileNav()" data-i18n="nav_about">About</a></li>
+        <li><a href="#services" onclick="toggleMobileNav()" data-i18n="nav_services">Services</a></li>
+        <li><a href="#methods" onclick="toggleMobileNav()" data-i18n="nav_methods">Methods</a></li>
+        <li><a href="#lessons" onclick="toggleMobileNav()" data-i18n="nav_lessons">Lessons</a></li>
+        <li><a href="#pricing" onclick="toggleMobileNav()" data-i18n="nav_pricing">Pricing</a></li>
+        <li><a href="#trial" onclick="toggleMobileNav()" data-i18n="nav_cta">Book Free Trial</a></li>
+    </ul>
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')">عربي</button>
+        <button class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+    </div>
+</div>
+
+<!-- 1. HERO -->
+<section class="hero" id="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div>
+                <span class="hero-badge"><i class="fas fa-star"></i> <span data-i18n="hero_badge">4+ Years Teaching Arabic Online</span></span>
+                <h1 class="hero-title">
+                    <span data-i18n="hero_title_1">Hi, I'm Al-Zahraa</span> —
+                    <span class="highlight" data-i18n="hero_title_2">Your Arabic & Quran Teacher</span>
+                </h1>
+                <p class="hero-desc" data-i18n="hero_desc">
+                    I help beginners and heritage learners speak Arabic confidently and recite the Quran beautifully — through fun, interactive Zoom lessons tailored to your goals.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#trial" class="btn btn-primary"><i class="fas fa-calendar-check"></i> <span data-i18n="hero_cta_primary">Book Your Free Trial</span></a>
+                    <a href="#about" class="btn btn-secondary"><i class="fas fa-play-circle"></i> <span data-i18n="hero_cta_secondary">Learn About Me</span></a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">4+</div>
+                        <div class="stat-label" data-i18n="stat_years">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label" data-i18n="stat_countries">Countries Reached</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label" data-i18n="stat_rating">Student Rating</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-img-wrapper">
+                    <img src="assets/images/Al zahraa.jpg" alt="Al-Zahraa Saeed — Arabic Teacher">
+                </div>
+                <div class="hero-float f1">
+                    <i class="fas fa-gamepad" style="color:var(--teal)"></i>
+                    <span data-i18n="float_games">Interactive Games</span>
+                </div>
+                <div class="hero-float f2">
+                    <i class="fas fa-certificate" style="color:var(--gold)"></i>
+                    <div>
+                        <strong data-i18n="float_certified">Certified Teacher</strong>
+                        <small style="display:block;color:var(--gray-500);font-size:0.75rem;" data-i18n="float_university">Cairo University</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. TRUST BAR -->
+<div class="trust-bar">
+    <div class="container">
+        <div class="trust-items">
+            <div class="trust-item"><i class="fas fa-graduation-cap"></i> <span data-i18n="trust_degree">Bachelor's in Languages — Cairo University</span></div>
+            <div class="trust-item"><i class="fas fa-certificate"></i> <span data-i18n="trust_diploma">Teaching Diploma — Ain Shams University</span></div>
+            <div class="trust-item"><i class="fas fa-globe"></i> <span data-i18n="trust_students">Students from 20+ countries</span></div>
+            <div class="trust-item"><i class="fas fa-shield-halved"></i> <span data-i18n="trust_guarantee">100% Money-Back Guarantee</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- 3. WHO IS IT FOR? -->
+<section class="section" id="about">
+    <div class="container">
+        <h2 class="section-title" data-i18n="audience_title">Who Are My Lessons For?</h2>
+        <p class="section-subtitle" data-i18n="audience_subtitle">Whether you're starting from scratch or perfecting your Quran recitation — I've got you.</p>
+        <div class="audience-grid">
+            <div class="audience-card fade-in">
+                <i class="fas fa-seedling"></i>
+                <h3 data-i18n="aud1_title">Complete Beginners</h3>
+                <p data-i18n="aud1_desc">Never spoken Arabic? We start from zero with fun, visual methods.</p>
+            </div>
+            <div class="audience-card fade-in">
+                <i class="fas fa-child"></i>
+                <h3 data-i18n="aud2_title">Children (Ages 6+)</h3>
+                <p data-i18n="aud2_desc">Interactive games and stories that keep kids engaged and learning.</p>
+            </div>
+            <div class="audience-card fade-in">
+                <i class="fas fa-book-quran"></i>
+                <h3 data-i18n="aud3_title">Quran Learners</h3>
+                <p data-i18n="aud3_desc">Tajweed, memorization, and beautiful recitation with proper pronunciation.</p>
+            </div>
+            <div class="audience-card fade-in">
+                <i class="fas fa-comments"></i>
+                <h3 data-i18n="aud4_title">Conversational Arabic</h3>
+                <p data-i18n="aud4_desc">Want to talk to family or travel? Learn real everyday Egyptian or MSA.</p>
+            </div>
+            <div class="audience-card fade-in">
+                <i class="fas fa-heritage"></i>
+                <h3 data-i18n="aud5_title">Heritage Learners</h3>
+                <p data-i18n="aud5_desc">Grew up hearing Arabic but never learned to read or speak properly?</p>
+            </div>
+            <div class="audience-card fade-in">
+                <i class="fas fa-briefcase"></i>
+                <h3 data-i18n="aud6_title">Professional Use</h3>
+                <p data-i18n="aud6_desc">Need Arabic for work, travel, or religious studies? Customized for your goals.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. WHAT CAN YOU LEARN? -->
+<section class="section" id="services" style="background:var(--gray-100);">
+    <div class="container">
+        <h2 class="section-title" data-i18n="services_title">What Can You Learn?</h2>
+        <p class="section-subtitle" data-i18n="services_subtitle">Four paths, one teacher, tailored to your goals.</p>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-language"></i></div>
+                <h3 data-i18n="svc1_title">Arabic Language</h3>
+                <p data-i18n="svc1_desc">Spoken & Modern Standard Arabic — from first words to fluent conversations.</p>
+                <div class="service-tags">
+                    <span class="service-tag">MSA</span>
+                    <span class="service-tag" data-i18n="svc1_tag1">Egyptian Arabic</span>
+                    <span class="service-tag" data-i18n="svc1_tag2">Grammar</span>
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-book-quran"></i></div>
+                <h3 data-i18n="svc2_title">Quran Reading</h3>
+                <p data-i18n="svc2_desc">Learn to read the Quran with confidence — proper pronunciation and fluency.</p>
+                <div class="service-tags">
+                    <span class="service-tag" data-i18n="svc2_tag1">Tajweed Rules</span>
+                    <span class="service-tag" data-i18n="svc2_tag2">Fluency</span>
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-mosque"></i></div>
+                <h3 data-i18n="svc3_title">Tajweed & Recitation</h3>
+                <p data-i18n="svc3_desc">Master the art of beautiful Quranic recitation with step-by-step Tajweed guidance.</p>
+                <div class="service-tags">
+                    <span class="service-tag" data-i18n="svc3_tag1">Rules</span>
+                    <span class="service-tag" data-i18n="svc3_tag2">Practice</span>
+                </div>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"><i class="fas fa-puzzle-piece"></i></div>
+                <h3 data-i18n="svc4_title">Arabic for Kids</h3>
+                <p data-i18n="svc4_desc">Fun, game-based lessons that make children love learning Arabic and the Quran.</p>
+                <div class="service-tags">
+                    <span class="service-tag" data-i18n="svc4_tag1">Ages 6+</span>
+                    <span class="service-tag" data-i18n="svc4_tag2">Interactive</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 5. HOW I TEACH -->
+<section class="section" id="methods">
+    <div class="container">
+        <h2 class="section-title" data-i18n="methods_title">How I Teach</h2>
+        <p class="section-subtitle" data-i18n="methods_subtitle">No boring textbooks. No memorization. Just real, enjoyable learning.</p>
+        <div class="methods-grid">
+            <div class="method-card fade-in">
+                <div class="method-icon"><i class="fas fa-gamepad"></i></div>
+                <h3 data-i18n="m1_title">Interactive Games</h3>
+                <p data-i18n="m1_desc">Wordwall, Quizizz, and custom games that make vocabulary stick.</p>
+                <span class="method-tag">Wordwall & Quizizz</span>
+            </div>
+            <div class="method-card fade-in">
+                <div class="method-icon"><i class="fas fa-eye"></i></div>
+                <h3 data-i18n="m2_title">Visual Storytelling</h3>
+                <p data-i18n="m2_desc">Learn through stories and images — no translation needed.</p>
+                <span class="method-tag" data-i18n="m2_tag">TPR Method</span>
+            </div>
+            <div class="method-card fade-in">
+                <div class="method-icon"><i class="fas fa-comments"></i></div>
+                <h3 data-i18n="m3_title">Real Conversations</h3>
+                <p data-i18n="m3_desc">Role-plays and real-life scenarios so you can use Arabic from day one.</p>
+                <span class="method-tag" data-i18n="m3_tag">Role-Playing</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 6. INSIDE MY ONLINE LESSONS -->
+<section class="section" id="lessons" style="background:var(--gray-100);">
+    <div class="container">
+        <h2 class="section-title" data-i18n="lessons_title">Inside My Online Lessons</h2>
+        <p class="section-subtitle" data-i18n="lessons_subtitle">A glimpse of what a typical Zoom session looks like.</p>
+        <div class="lessons-grid">
+            <div class="lesson-card fade-in">
+                <img src="assets/images/Interactive Games.jpg" alt="Interactive Games" class="lesson-img">
+                <div class="lesson-body">
+                    <h3 data-i18n="les1_title">Interactive Games & Activities</h3>
+                    <p data-i18n="les1_desc">Vocabulary wheels, matching games, and quizzes — all live on screen.</p>
+                </div>
+            </div>
+            <div class="lesson-card fade-in">
+                <img src="assets/images/lesson 2.jpg" alt="Visual Boards" class="lesson-img">
+                <div class="lesson-body">
+                    <h3 data-i18n="les2_title">Visual Learning Boards</h3>
+                    <p data-i18n="les2_desc">Colorful Canva boards and flashcards for every lesson.</p>
+                </div>
+            </div>
+            <div class="lesson-card fade-in">
+                <img src="assets/images/Zoom Session.png" alt="Zoom Session" class="lesson-img">
+                <div class="lesson-body">
+                    <h3 data-i18n="les3_title">Live Zoom Sessions</h3>
+                    <p data-i18n="les3_desc">Screen sharing, whiteboard, and real-time interaction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 7. STUDENT RESULTS -->
+<section class="section" id="results">
+    <div class="container">
+        <h2 class="section-title" data-i18n="results_title">What My Students Achieve</h2>
+        <p class="section-subtitle" data-i18n="results_subtitle">Real results from real students — here's what you can expect.</p>
+        <div class="results-grid">
+            <div class="result-card fade-in">
+                <div class="result-icon"><i class="fas fa-comments"></i></div>
+                <div>
+                    <h3 data-i18n="res1_title">Hold Daily Conversations</h3>
+                    <p data-i18n="res1_desc">Within 8-12 weeks, students can have simple daily conversations in Arabic.</p>
+                </div>
+            </div>
+            <div class="result-card fade-in">
+                <div class="result-icon"><i class="fas fa-book-open"></i></div>
+                <div>
+                    <h3 data-i18n="res2_title">Read the Quran</h3>
+                    <p data-i18n="res2_desc">Students learn to read Arabic script fluently and recite with proper Tajweed.</p>
+                </div>
+            </div>
+            <div class="result-card fade-in">
+                <div class="result-icon"><i class="fas fa-brain"></i></div>
+                <div>
+                    <h3 data-i18n="res3_title">Remember Vocabulary</h3>
+                    <p data-i18n="res3_desc">Interactive games and spaced repetition help words stick long-term.</p>
+                </div>
+            </div>
+            <div class="result-card fade-in">
+                <div class="result-icon"><i class="fas fa-trophy"></i></div>
+                <div>
+                    <h3 data-i18n="res4_title">Build Confidence</h3>
+                    <p data-i18n="res4_desc">Students overcome fear of speaking and start enjoying Arabic.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 8. REVIEWS -->
+<section class="section" id="reviews" style="background:var(--gray-100);">
+    <div class="container">
+        <h2 class="section-title" data-i18n="reviews_title">What Students Say</h2>
+        <p class="section-subtitle" data-i18n="reviews_subtitle">Verified reviews from students around the world.</p>
+        <div class="reviews-grid">
+            <div class="review-card fade-in">
+                <div>
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text" data-i18n="rev1_text">"Al-Zahraa makes learning Arabic so fun! The games and interactive activities keep me engaged. I've learned more in 3 months than I did in a year of self-study."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">S</div>
+                        <div>
+                            <div class="review-name">Sarah M.</div>
+                            <div class="review-meta" data-i18n="rev1_meta">United States — Learning Arabic</div>
+                            <span class="review-verified"><i class="fas fa-check-circle"></i> <span data-i18n="verified">Verified Student</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card fade-in">
+                <div>
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text" data-i18n="rev2_text">"The best Arabic teacher I've found! Patient, creative, and really knows how to explain things. My Quran recitation has improved so much."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">A</div>
+                        <div>
+                            <div class="review-name">Ahmed K.</div>
+                            <div class="review-meta" data-i18n="rev2_meta">Canada — Quran & Tajweed</div>
+                            <span class="review-verified"><i class="fas fa-check-circle"></i> <span data-i18n="verified">Verified Student</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card fade-in">
+                <div>
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text" data-i18n="rev3_text">"My daughter loves her Arabic lessons! The games keep her excited and she's learning so fast. Best investment in her education."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">F</div>
+                        <div>
+                            <div class="review-name">Fatima R.</div>
+                            <div class="review-meta" data-i18n="rev3_meta">Germany — Arabic for Kids</div>
+                            <span class="review-verified"><i class="fas fa-check-circle"></i> <span data-i18n="verified">Verified Parent</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card fade-in">
+                <div>
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text" data-i18n="rev4_text">"I started as a complete beginner and now I can read Arabic and hold basic conversations. The visual methods really work!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">M</div>
+                        <div>
+                            <div class="review-name">Michael T.</div>
+                            <div class="review-meta" data-i18n="rev4_meta">UK — Arabic for Beginners</div>
+                            <span class="review-verified"><i class="fas fa-check-circle"></i> <span data-i18n="verified">Verified Student</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 9. PRICING -->
+<section class="section" id="pricing">
+    <div class="container">
+        <h2 class="section-title" data-i18n="pricing_title">Simple, Transparent Pricing</h2>
+        <p class="section-subtitle" data-i18n="pricing_subtitle">Start with a free trial. No commitments.</p>
+        <div class="pricing-grid">
+            <div class="pricing-card fade-in">
+                <h3 data-i18n="p1_title">Free Trial</h3>
+                <p class="pricing-sub" data-i18n="p1_sub">30 minutes — No cost</p>
+                <div class="price" data-i18n="p1_price">FREE</div>
+                <div class="price-note" data-i18n="p1_note">One-time only</div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> <span data-i18n="p1_f1">30-min Zoom session</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="p1_f2">Level assessment</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="p1_f3">Personalized learning plan</span></li>
+                </ul>
+                <a href="#trial" class="btn btn-secondary" style="width:100%;justify-content:center;" data-i18n="p1_cta">Book Free Trial</a>
+            </div>
+            <div class="pricing-card popular fade-in">
+                <span class="badge-popular" data-i18n="p2_badge">Most Popular</span>
+                <h3 data-i18n="p2_title">4-Lesson Package</h3>
+                <p class="pricing-sub" data-i18n="p2_sub">4 × 50 minutes</p>
+                <div class="price" data-i18n="p2_price">$40</div>
+                <div class="price-note" data-i18n="p2_note">Pay per package</div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> <span data-i18n="p2_f1">4 × 50-min Zoom sessions</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="p2_f2">Custom PDF worksheets</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="p2_f3">Wordwall homework games</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="p2_f4">Session recordings</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="p2_f5">Telegram support between lessons</span></li>
+                </ul>
+                <a href="https://wa.me/201227225751?text=Hi%20Al-Zahraa!%20I%27d%20like%20to%20book%20the%204-lesson%20package." class="btn btn-primary" style="width:100%;justify-content:center;" target="_blank" data-i18n="p2_cta">Get Started</a>
+            </div>
+            <div class="pricing-card fade-in">
+                <h3 data-i18n="p3_title">8-Lesson Package</h3>
+                <p class="pricing-sub" data-i18n="p3_sub">8 × 50 minutes</p>
+                <div class="price" data-i18n="p3_price">$70</div>
+                <div class="price-note" data-i18n="p3_note">Save more</div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> <span data-i18n="p3_f1">Everything in 4-Lesson Package</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="p3_f2">Priority scheduling</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="p3_f3">Extra practice materials</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="p3_f4">Progress tracking report</span></li>
+                    <li><i class="fas fa-check"></i> <span data-i18n="p3_f5">Certificate of completion</span></li>
+                </ul>
+                <a href="https://wa.me/201227225751?text=Hi%20Al-Zahraa!%20I%27d%20like%20to%20book%20the%208-lesson%20package." class="btn btn-secondary" style="width:100%;justify-content:center;" target="_blank" data-i18n="p3_cta">Get Best Value</a>
+            </div>
+        </div>
+        <p style="text-align:center;margin-top:24px;font-size:0.85rem;color:var(--text-light);" data-i18n="guarantee">All packages include a 100% money-back guarantee after the first lesson.</p>
+    </div>
+</section>
+
+<!-- 10. FREE TRIAL PROCESS -->
+<section class="section" id="trial" style="background:var(--cream);">
+    <div class="container">
+        <h2 class="section-title" data-i18n="trial_title">What Happens in the Free Trial?</h2>
+        <p class="section-subtitle" data-i18n="trial_subtitle">30 minutes that will change how you see learning Arabic.</p>
+        <div class="trial-steps">
+            <div class="trial-step fade-in">
+                <div class="step-number">1</div>
+                <h4 data-i18n="step1_title">Book Your Slot</h4>
+                <p data-i18n="step1_desc">Pick a time that works for you via WhatsApp or Calendly.</p>
+            </div>
+            <div class="trial-step fade-in">
+                <div class="step-number">2</div>
+                <h4 data-i18n="step2_title">Meet on Zoom</h4>
+                <p data-i18n="step2_desc">We'll chat for 5 minutes so I can understand your goals.</p>
+            </div>
+            <div class="trial-step fade-in">
+                <div class="step-number">3</div>
+                <h4 data-i18n="step3_title">Try a Mini Lesson</h4>
+                <p data-i18n="step3_desc">Experience my teaching style with a fun, interactive mini-lesson.</p>
+            </div>
+            <div class="trial-step fade-in">
+                <div class="step-number">4</div>
+                <h4 data-i18n="step4_title">Get Your Plan</h4>
+                <p data-i18n="step4_desc">Receive a personalized learning roadmap — no pressure, just clarity.</p>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:40px;">
+            <a href="https://wa.me/201227225751?text=Hi%20Al-Zahraa!%20I%27d%20like%20to%20book%20a%20free%20trial%20lesson." class="btn btn-primary" target="_blank">
+                <i class="fab fa-whatsapp"></i> <span data-i18n="trial_cta">Book Free Trial on WhatsApp</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- 11. FAQ -->
+<section class="section" id="faq">
+    <div class="container">
+        <h2 class="section-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+        <p class="section-subtitle" data-i18n="faq_subtitle">Quick answers to common questions.</p>
+        <div class="faq-list">
+            <div class="faq-item active">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q1">I'm a complete beginner. Can I start?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer" style="max-height:200px;">
+                    <div class="faq-answer-content" data-i18n="faq_a1">Absolutely! I specialize in teaching beginners. We start with basic letters, simple words, and easy conversations from the very first lesson.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q2">What's the difference between MSA and Egyptian Arabic?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq_a2">MSA (Modern Standard Arabic) is used in books, news, and formal settings. Egyptian Arabic is the spoken dialect used in daily life across Egypt and the Arab world. I teach both — or either, depending on your goals.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q3">Do you teach children?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq_a3">Yes! I teach children aged 6 and above using interactive games, stories, and visual activities that keep them engaged and excited to learn.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q4">How long until I can speak Arabic?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq_a4">With consistent lessons (2-3 times per week), most students hold simple daily conversations within 8-12 weeks.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q5">Do you teach Quran and Tajweed?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq_a5">Yes! I teach Quran reading with proper Tajweed rules, from basic letter pronunciation to advanced recitation. This is one of my specialties.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_q6">Can I reschedule lessons?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content" data-i18n="faq_a6">Yes, you can reschedule any lesson up to 24 hours in advance — no questions asked.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 12. FINAL CTA -->
+<section class="final-cta">
+    <div class="container">
+        <h2 data-i18n="cta_title">Ready to Start Your Arabic Journey?</h2>
+        <p data-i18n="cta_desc">Book your free trial lesson today. No commitments, no credit card — just 30 minutes of fun, interactive learning.</p>
+        <a href="https://wa.me/201227225751?text=Hi%20Al-Zahraa!%20I%27d%20like%20to%20book%20a%20free%20trial%20lesson." class="btn btn-primary" target="_blank" style="font-size:1.1rem;padding:16px 32px;">
+            <i class="fab fa-whatsapp"></i> <span data-i18n="cta_btn">Book Free Trial on WhatsApp</span>
+        </a>
+    </div>
+</section>
+
+<!-- 13. FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-text">Al-<span style="color:var(--teal)">Zahraa</span></div>
+                <p data-i18n="footer_desc">Teaching Arabic and Quran to students worldwide through interactive, fun, and effective methods.</p>
+                <div class="social-links">
+                    <a href="https://t.me/AlZahraaArabic" class="social-link" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://wa.me/201227225751" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_quick">Quick Links</h4>
+                <ul>
+                    <li><a href="#about" data-i18n="nav_about">About</a></li>
+                    <li><a href="#services" data-i18n="nav_services">Services</a></li>
+                    <li><a href="#methods" data-i18n="nav_methods">Methods</a></li>
+                    <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_services">Services</h4>
+                <ul>
+                    <li><a href="#services">Arabic Language</a></li>
+                    <li><a href="#services">Quran Reading</a></li>
+                    <li><a href="#services">Tajweed</a></li>
+                    <li><a href="#services">Arabic for Kids</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_contact">Contact</h4>
+                <ul>
+                    <li><a href="https://wa.me/201227225751" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://t.me/AlZahraaArabic" target="_blank">Telegram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_copy">&copy; 2024 Al-Zahraa Saeed. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/201227225751?text=Hi%20Al-Zahraa!%20I%27m%20interested%20in%20booking%20a%20free%20Arabic%20trial%20lesson."
+   target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+// ===== TRANSLATIONS =====
+const translations = {
+    en: {
+        logo_subtitle: "Arabic Teacher",
+        nav_about: "About", nav_services: "Services", nav_methods: "Methods",
+        nav_lessons: "Lessons", nav_pricing: "Pricing", nav_cta: "Book Free Trial",
+        hero_badge: "4+ Years Teaching Arabic Online",
+        hero_title_1: "Hi, I'm Al-Zahraa",
+        hero_title_2: "Your Arabic & Quran Teacher",
+        hero_desc: "I help beginners, non-native speakers, and heritage learners speak Arabic with confidence and recite the Quran beautifully — through fun, interactive online lessons tailored to your goals.",
+        hero_cta_primary: "Book Your Free Trial",
+        hero_cta_secondary: "Learn About Me",
+        stat_years: "Years Experience",
+        stat_countries: "Countries Reached",
+        stat_rating: "Student Rating",
+        float_games: "Interactive Games",
+        float_certified: "Certified Teacher",
+        float_university: "Cairo University",
+        trust_degree: "Bachelor's in Arabic Studies — Cairo University",
+        trust_diploma: "Teaching Diploma — Al-Azhar University",
+        trust_students: "Students from 20+ countries",
+        trust_guarantee: "100% Money-Back Guarantee",
+        audience_title: "Who Are My Lessons For?",
+        audience_subtitle: "Whether you're starting from scratch or perfecting your Quran recitation — I've got you.",
+        aud1_title: "Complete Beginners", aud1_desc: "Never spoken Arabic? We start from zero with fun, visual methods.",
+        aud2_title: "Children (Ages 6+)", aud2_desc: "Interactive games and stories that keep kids engaged and learning.",
+        aud3_title: "Quran Learners", aud3_desc: "Tajweed, memorization, and beautiful recitation with proper pronunciation.",
+        aud4_title: "Conversational Arabic", aud4_desc: "Want to talk to family or travel? Learn real everyday Egyptian or MSA.",
+        aud5_title: "Heritage Learners", aud5_desc: "Grew up hearing Arabic but never learned to read or speak properly?",
+        aud6_title: "Professional Use", aud6_desc: "Need Arabic for work, travel, or religious studies? Customized for your goals.",
+        services_title: "What Can You Learn?",
+        services_subtitle: "Four paths, one teacher, tailored to your goals.",
+        svc1_title: "Arabic Language", svc1_desc: "Spoken & Modern Standard Arabic — from first words to fluent conversations.", svc1_tag1: "Egyptian Arabic", svc1_tag2: "Grammar",
+        svc2_title: "Quran Reading", svc2_desc: "Learn to read the Quran with confidence — proper pronunciation and fluency.", svc2_tag1: "Tajweed Rules", svc2_tag2: "Fluency",
+        svc3_title: "Tajweed & Recitation", svc3_desc: "Master the art of beautiful Quranic recitation with step-by-step Tajweed guidance.", svc3_tag1: "Rules", svc3_tag2: "Practice",
+        svc4_title: "Arabic for Kids", svc4_desc: "Fun, game-based lessons that make children love learning Arabic and the Quran.", svc4_tag1: "Ages 6+", svc4_tag2: "Interactive",
+        methods_title: "How I Teach",
+        methods_subtitle: "No boring textbooks. No memorization. Just real, enjoyable learning.",
+        m1_title: "Interactive Games", m1_desc: "Wordwall, Quizizz, and custom games that make vocabulary stick.",
+        m2_title: "Visual Storytelling", m2_desc: "Learn through stories and images — no translation needed.", m2_tag: "TPR Method",
+        m3_title: "Real Conversations", m3_desc: "Role-plays and real-life scenarios so you can use Arabic from day one.", m3_tag: "Role-Playing",
+        lessons_title: "Inside My Online Lessons",
+        lessons_subtitle: "A glimpse of what a typical Zoom session looks like.",
+        les1_title: "Interactive Games & Activities", les1_desc: "Vocabulary wheels, matching games, and quizzes — all live on screen.",
+        les2_title: "Visual Learning Boards", les2_desc: "Colorful Canva boards and flashcards for every lesson.",
+        les3_title: "Live Zoom Sessions", les3_desc: "Screen sharing, whiteboard, and real-time interaction.",
+        results_title: "What My Students Achieve",
+        results_subtitle: "Real results from real students — here's what you can expect.",
+        res1_title: "Hold Daily Conversations", res1_desc: "Within 8-12 weeks, students can have simple daily conversations in Arabic.",
+        res2_title: "Read the Quran", res2_desc: "Students learn to read Arabic script fluently and recite with proper Tajweed.",
+        res3_title: "Remember Vocabulary", res3_desc: "Interactive games and spaced repetition help words stick long-term.",
+        res4_title: "Build Confidence", res4_desc: "Students overcome fear of speaking and start enjoying Arabic.",
+        reviews_title: "What Students Say",
+        reviews_subtitle: "Verified reviews from students around the world.",
+        rev1_text: '"Al-Zahraa makes learning Arabic so fun! The games and interactive activities keep me engaged. I\'ve learned more in 3 months than I did in a year of self-study."',
+        rev1_meta: "United States — Learning Arabic",
+        rev2_text: '"The best Arabic teacher I\'ve found! Patient, creative, and really knows how to explain things. My Quran recitation has improved so much."',
+        rev2_meta: "Canada — Quran & Tajweed",
+        rev3_text: '"My daughter loves her Arabic lessons! The games keep her excited and she\'s learning so fast. Best investment in her education."',
+        rev3_meta: "Germany — Arabic for Kids",
+        rev4_text: '"I started as a complete beginner and now I can read Arabic and hold basic conversations. The visual methods really work!"',
+        rev4_meta: "UK — Arabic for Beginners",
+        verified: "Verified Student",
+        pricing_title: "Simple, Transparent Pricing",
+        pricing_subtitle: "Start with a free trial. No commitments.",
+        p1_title: "Free Trial", p1_sub: "30 minutes — No cost", p1_price: "FREE", p1_note: "One-time only",
+        p1_f1: "30-min Zoom session", p1_f2: "Level assessment", p1_f3: "Personalized learning plan", p1_cta: "Book Free Trial",
+        p2_badge: "Most Popular", p2_title: "4-Lesson Package", p2_sub: "4 × 50 minutes", p2_price: "$40", p2_note: "4 × 50 min",
+        p2_f1: "4 × 50-min Zoom sessions", p2_f2: "Custom PDF worksheets", p2_f3: "Wordwall homework games", p2_f4: "Session recordings", p2_f5: "Telegram support between lessons", p2_cta: "Get Started",
+        p3_title: "8-Lesson Package", p3_sub: "8 × 50 minutes", p3_price: "$70", p3_note: "8 × 50 min",
+        p3_f1: "Everything in 4-Lesson Package", p3_f2: "Priority scheduling", p3_f3: "Extra practice materials", p3_f4: "Progress tracking report", p3_f5: "Certificate of completion", p3_cta: "Get Best Value",
+        guarantee: "All packages include a 100% money-back guarantee after the first lesson.",
+        trial_title: "What Happens in the Free Trial?",
+        trial_subtitle: "30 minutes that will change how you see learning Arabic.",
+        step1_title: "Book Your Slot", step1_desc: "Pick a time that works for you via WhatsApp or Calendly.",
+        step2_title: "Meet on Zoom", step2_desc: "We'll chat for 5 minutes so I can understand your goals.",
+        step3_title: "Try a Mini Lesson", step3_desc: "Experience my teaching style with a fun, interactive mini-lesson.",
+        step4_title: "Get Your Plan", step4_desc: "Receive a personalized learning roadmap — no pressure, just clarity.",
+        trial_cta: "Book Free Trial on WhatsApp",
+        faq_title: "Frequently Asked Questions",
+        faq_subtitle: "Quick answers to common questions.",
+        faq_q1: "I'm a complete beginner. Can I start?",
+        faq_a1: "Absolutely! I specialize in teaching beginners. We start with basic letters, simple words, and easy conversations from the very first lesson.",
+        faq_q2: "What's the difference between MSA and Egyptian Arabic?",
+        faq_a2: "MSA (Modern Standard Arabic) is used in books, news, and formal settings. Egyptian Arabic is the spoken dialect used in daily life across Egypt and the Arab world. I teach both — or either, depending on your goals.",
+        faq_q3: "Do you teach children?",
+        faq_a3: "Yes! I teach children aged 6 and above using interactive games, stories, and visual activities that keep them engaged and excited to learn.",
+        faq_q4: "How long until I can speak Arabic?",
+        faq_a4: "With consistent lessons (2-3 times per week), most students hold simple daily conversations within 8-12 weeks.",
+        faq_q5: "Do you teach Quran and Tajweed?",
+        faq_a5: "Yes! I teach Quran reading with proper Tajweed rules, from basic letter pronunciation to advanced recitation. This is one of my specialties.",
+        faq_q6: "Can I reschedule lessons?",
+        faq_a6: "Yes, you can reschedule any lesson up to 24 hours in advance — no questions asked.",
+        cta_title: "Ready to Start Your Arabic Journey?",
+        cta_desc: "Book your free trial lesson today. No commitments, no credit card — just 30 minutes of fun, interactive learning.",
+        cta_btn: "Book Free Trial on WhatsApp",
+        footer_desc: "Teaching Arabic and Quran to students worldwide through interactive, fun, and effective methods.",
+        footer_quick: "Quick Links", footer_services: "Services", footer_contact: "Contact",
+        footer_location: "",
+        footer_copy: "\u00a9 2024 Al-Zahraa Saeed. All rights reserved."
+    },
+    ar: {
+        logo_subtitle: "معلمة اللغة العربية",
+        nav_about: "نبذة عني", nav_services: "الخدمات", nav_methods: "طريقة التدريس",
+        nav_lessons: "الدروس", nav_pricing: "الأسعار", nav_cta: "احجز درس مجاني",
+        hero_badge: "+4 سنوات تعليم اللغة العربية عبر الإنترنت",
+        hero_title_1: "مرحبًا، أنا الزهراء",
+        hero_title_2: "معلمتك للغة العربية والقرآن الكريم",
+        hero_desc: "أساعد المبتدئين وغير الناطقين بالعربية وأبناء الجاليات على التحدث باللغة العربية بثقة وتلاوة القرآن الكريم بإتقان — من خلال دروس تفاعلية مخصصة عبر الإنترنت.",
+        hero_cta_primary: "احجز درسك المجاني",
+        hero_cta_secondary: "تعرف عليّ",
+        stat_years: "سنوات خبرة",
+        stat_countries: "دولة تم الوصول إليها",
+        stat_rating: "تقييم الطلاب",
+        float_games: "ألعاب تفاعلية",
+        float_certified: "معلمة معتمدة",
+        float_university: "جامعة القاهرة",
+        trust_degree: "ليسانس دار العلوم — جامعة القاهرة",
+        trust_diploma: "دبلومة تربية — جامعة السادات",
+        trust_students: "طلاب من أكثر من 20 دولة",
+        trust_guarantee: "ضمان استرداد 100%",
+        audience_title: "دروسنا مخصصة لمن؟",
+        audience_subtitle: "سواء بدأت من الأول أو تريد تحسين ترتيل القرآن الكريم — أنا هنا لمساعدتك.",
+        aud1_title: "مبتدئون كليًا", aud1_desc: "لم تتحدث العربية من قبل؟ نبدأ من الصفر بأساليب تفاعلية وممتعة.",
+        aud2_title: "الأطفال (6 سنوات فأكثر)", aud2_desc: "ألعاب وقصص تفاعلية تُبقي الأطفال مهتمين ومتعلمين.",
+        aud3_title: "طلاب القرآن الكريم", aud3_desc: "تجويد، حفظ، وترتيل جميل مع نطق صحيح.",
+        aud4_title: "العربية للمحادثة", aud4_desc: "هل تريد التحدث مع العائلة أو السفر؟ تعلم اللهجة المصرية أو الفصحى اليومية.",
+        aud5_title: "طلاب التراث", aud5_desc: "كبرتَ وسمعت العربية لكنك لم تتعلم القراءة أو التحدث بالشكل الصحيح؟",
+        aud6_title: "للعمل والاحتراف", aud6_desc: "هل تحتاج اللغة العربية للعمل أو السفر أو الدراسة الدينية؟ مخصصة لأهدافك.",
+        services_title: "ماذا تتعلم؟",
+        services_subtitle: "أربعة مسارات، معلمة واحدة، مصممة لأهدافك.",
+        svc1_title: "اللغة العربية", svc1_desc: "العربية المحكية والمعيارية — من أول كلمة إلى المحادثات الطلاقة.", svc1_tag1: "المصري", svc1_tag2: "قواعد",
+        svc2_title: "قراءة القرآن الكريم", svc2_desc: "تعلم قراءة القرآن الكريم بثقة — نطق صحيح وطلاقة.", svc2_tag1: "قواعد التجويد", svc2_tag2: "طلاقة",
+        svc3_title: "التجويد والترتيل", svc3_desc: "أتقن فن ترتيل القرآن الكريم مع إرشاد خطوة بخطوة في التجويد.", svc3_tag1: "قواعد", svc3_tag2: "تطبيق",
+        svc4_title: "العربية للأطفال", svc4_desc: "دروس ممتعة بالألعاب تجعل الأطفال يحبون تعلم اللغة العربية والقرآن الكريم.", svc4_tag1: "6 سنوات+", svc4_tag2: "تفاعلي",
+        methods_title: "كيف أُعلّم",
+        methods_subtitle: "لا كتب مملة. لا حفظ. فقط تعلم حقيقي وممتع.",
+        m1_title: "ألعاب تفاعلية", m1_desc: "Wordwall وQuizizz وألعاب مخصصة تُثبّت المفردات في الذاكرة.",
+        m2_title: "السرد البصري", m2_desc: "تعلم من خلال القصص والصور — بدون ترجمة.", m2_tag: "أسلوب TPR",
+        m3_title: "محادثات حقيقية", m3_desc: "تمثيل أدوار وسيناريوهات واقعية لاستخدام اللغة العربية من أول يوم.", m3_tag: "تمثيل أدوار",
+        lessons_title: "جولة داخل دروسي عبر الإنترنت",
+        lessons_subtitle: "نظرة على شكل جلسة Zoom الحقيقية.",
+        les1_title: "ألعاب وأنشطة تفاعلية", les1_desc: "عجلة المفردات، ألعاب المطابقة، والاختبارات — كلها مباشرة على الشاشة.",
+        les2_title: "لوحات تعلم بصرية", les2_desc: "لوحات Canva وبطاقات ملونة لكل درس.",
+        les3_title: "جلسات Zoom مباشرة", les3_desc: "مشاركة الشاشة، السبورة، والتفاعل في الوقت الفعلي.",
+        results_title: "ما يحققه طلابي",
+        results_subtitle: "نتائج حقيقية من طلاب حقيقيين — هذا ما يمكنك تحقيقه.",
+        res1_title: "محادثات يومية", res1_desc: "خلال 8-12 أسبوع، يتمكن الطالب من إجراء محادثات يومية باللغة العربية.",
+        res2_title: "قراءة القرآن الكريم", res2_desc: "يتعلم الطلاب قراءة الخط العربي بطلاقة وترتيل القرآن الكريم بتجويد صحيح.",
+        res3_title: "تذكر المفردات", res3_desc: "الألعاب التفاعلية والتكرار المتباعد يساعدان على تثبيت المفردات على المدى الطويل.",
+        res4_title: "بناء الثقة", res4_desc: "يتغلب الطلاب على خوف التحدث ويبدأون في الاستمتاع باللغة العربية.",
+        reviews_title: "ماذا يقولون الطلاب؟",
+        reviews_subtitle: "تقييمات موثقة من طلاب حول العالم.",
+        rev1_text: '"الزهراء تجعل تعلم اللغة العربية ممتعًا جدًا! الألعاب والأنشطة التفاعلية تبقيني منكبًا. تعلمت في 3 أشهر أكثر مما تعلمت في سنة من الدراسة الذاتية."',
+        rev1_meta: "الولايات المتحدة — تعلم اللغة العربية",
+        rev2_text: '"أفضل معلمة عربية لقيتها! صبورة، مبدعة، وتعرف كيف تشرح الأمور. ترتيلي للقرآن الكريم تحسن كثيرًا."',
+        rev2_meta: "كندا — القرآن الكريم والتجويد",
+        rev3_text: '"ابنتي تحب دروس اللغة العربية! الألعاب تُبقيها متحمسة وهي تتعلم بسرعة. أفضل استثمار في تعليمها."',
+        rev3_meta: "ألمانيا — العربية للأطفال",
+        rev4_text: '"بدأت مبتدئ تام والآن أقرأ اللغة العربية وأُجري محادثات أساسية. الأساليب البصرية فعلاً نجحت!"',
+        rev4_meta: "بريطانيا — العربية للمبتدئين",
+        verified: "طالب موثق",
+        pricing_title: "أسعار بسيطة وواضحة",
+        pricing_subtitle: "ابدأ بدرس تجريبي مجاني. بدون التزامات.",
+        p1_title: "درس تجريبي", p1_sub: "30 دقيقة — بدون تكلفة", p1_price: "مجاني", p1_note: "مرة واحدة فقط",
+        p1_f1: "جلسة Zoom 30 دقيقة", p1_f2: "تقييم المستوى", p1_f3: "خطة تعلم مخصصة", p1_cta: "احجز درس مجاني",
+        p2_badge: "الأكثر طلبًا", p2_title: "باقة 4 دروس", p2_sub: "4 × 50 دقيقة", p2_price: "$40", p2_note: "4 × 50 دقيقة",
+        p2_f1: "4 جلسات Zoom × 50 دقيقة", p2_f2: "worksheets PDF مخصصة", p2_f3: "واجبات Wordwall", p2_f4: "تسجيلات الجلسات", p2_f5: "دعم عبر تيليجرام بين الدروس", p2_cta: "ابدأ الآن",
+        p3_title: "باقة 8 دروس", p3_sub: "8 × 50 دقيقة", p3_price: "$70", p3_note: "8 × 50 دقيقة",
+        p3_f1: "كل ما في باقة 4 دروس", p3_f2: "أولوية في الجدولة", p3_f3: "مواد تدريبية إضافية", p3_f4: "تقرير تتبع التقدم", p3_f5: "شهادة إتمام", p3_cta: "احصل على أفضل قيمة",
+        guarantee: "جميع الباقات تشمل ضمان استرداد 100% بعد أول درس.",
+        trial_title: "ماذا يحدث في الدرس التجريبي؟",
+        trial_subtitle: "30 دقيقة تُغيّر نظرك لتعلم اللغة العربية.",
+        step1_title: "احجز موعدك", step1_desc: "اختر الوقت المناسب لك عبر واتساب أو Calendly.",
+        step2_title: "تقابل على Zoom", step2_desc: "نسولف 5 دقائق لأفهم أهدافك.",
+        step3_title: "جرّب درسًا صغيرًا", step3_desc: "جرّب أسلوبي التفاعلي مع درس صغير وممتع.",
+        step4_title: "تأخذ خطتك", step4_desc: "تحصل على خطة تعلم مخصصة — بدون ضغط، فقط وضوح.",
+        trial_cta: "احجز درس مجاني عبر واتساب",
+        faq_title: "الأسئلة الشائعة",
+        faq_subtitle: "إجابات سريعة على الأسئلة الشائعة.",
+        faq_q1: "أنا مبتدئ تام. هل أستطيع البدء؟",
+        faq_a1: "بالتأكيد! أنا متخصصة في تعليم المبتدئين. نبدأ بحروف أساسية وكلمات بسيطة ومحادثات سهلة من أول درس.",
+        faq_q2: "ما الفرق بين الفصحى واللهجة المصرية؟",
+        faq_a2: "الفصحى (العربية المعيارية الحديثة) تُستخدم في الكتب والأخبار والمناسبات الرسمية. واللهجة المصرية هي اللغة المحكية اليومية في مصر والعالم العربي. أُعلّم اللغةين — أو أي واحدة، حسب أهدافك.",
+        faq_q3: "هل تُعلّمين الأطفال؟",
+        faq_a3: "نعم! أُعلّم الأطفال من 6 سنوات فأكثر بألعاب تفاعلية وأنشطة بصرية تُبقيهم مهتمين ومتحمسين للتعلم.",
+        faq_q4: "متى أستطيع التحدث بالعربية؟",
+        faq_a4: "بانتظام الدروس (2-3 مرات أسبوعيًا)، يستطيع معظم الطلاب إجراء محادثات يومية بسيطة خلال 8-12 أسبوعًا.",
+        faq_q5: "هل تُعلّمين القرآن الكريم والتجويد؟",
+        faq_a5: "نعم! أُعلّم قراءة القرآن الكريم بقواعد تجويد صحيحة، من نطق الحروف الأساسية إلى الترتيل المتقدم. هذا من تخصصاتي.",
+        faq_q6: "هل يمكنني تغيير موعد الدرس؟",
+        faq_a6: "نعم، يمكنك تغيير أي درس قبل 24 ساعة — بدون أسئلة.",
+        cta_title: "جاهز لتبدأ رحلتك في اللغة العربية؟",
+        cta_desc: "احجز درسك التجريبي المجاني اليوم. بدون التزامات، بدون بطاقة ائتمان — فقط 30 دقيقة من التعلم التفاعلي الممتع.",
+        cta_btn: "احجز درس مجاني عبر واتساب",
+        footer_desc: "تعليم اللغة العربية والقرآن الكريم لطلاب حول العالم من خلال أساليب تفاعلية وممتعة وفعّالة.",
+        footer_quick: "روابط سريعة", footer_services: "الخدمات", footer_contact: "التواصل",
+        footer_location: "",
+        footer_copy: "\u00a9 2024 الزهراء سعيد. جميع الحقوق محفوظة."
+    },
+    fr: {
+        logo_subtitle: "Enseignante d'arabe",
+        nav_about: "À propos", nav_services: "Services", nav_methods: "Méthodes",
+        nav_lessons: "Cours", nav_pricing: "Tarifs", nav_cta: "Réserver un cours gratuit",
+        hero_badge: "4+ ans d'enseignement de l'arabe en ligne",
+        hero_title_1: "Bonjour, je suis Al-Zahraa",
+        hero_title_2: "Votre enseignante d'arabe et du Coran",
+        hero_desc: "J'aide les débutants, les non-arabophones et les apprenants d'origine à parler arabe avec confiance et à réciter le Coran magnifiquement — à travers des cours en ligne amusants et interactifs adaptés à vos objectifs.",
+        hero_cta_primary: "Réserver votre cours gratuit",
+        hero_cta_secondary: "En savoir plus",
+        stat_years: "Années d'expérience",
+        stat_countries: "Pays atteints",
+        stat_rating: "Évaluation des élèves",
+        float_games: "Jeux interactifs",
+        float_certified: "Enseignante certifiée",
+        float_university: "Université du Caire",
+        trust_degree: "Licence en Études Arabes — Université du Caire",
+        trust_diploma: "Diplôme d'enseignement — Université Al-Azhar",
+        trust_students: "Élèves de plus de 20 pays",
+        trust_guarantee: "Garantie de remboursement 100%",
+        audience_title: "Pour qui sont mes cours ?",
+        audience_subtitle: "Que vous démarriez de zéro ou que vous perfectionniez votre récitation du Coran — je suis là pour vous.",
+        aud1_title: "Débutants complets", aud1_desc: "Vous n'avez jamais parlé arabe ? On commence de zéro avec des méthodes amusantes et visuelles.",
+        aud2_title: "Enfants (6+ ans)", aud2_desc: "Jeux et histoires interactives qui gardent les enfants engagés et en train d'apprendre.",
+        aud3_title: "Apprenants du Coran", aud3_desc: "Tajweed, mémorisation et récitation magnifique avec une prononciation correcte.",
+        aud4_title: "Arabe conversationnel", aud4_desc: "Vous voulez parler à votre famille ou voyager ? Apprenez l'arabe égyptien ou standard quotidien.",
+        aud5_title: "Apprenants d'héritage", aud5_desc: "Vous avez grandi en entendant l'arabe sans jamais apprendre à lire ou parler correctement ?",
+        aud6_title: "Usage professionnel", aud6_desc: "Besoin d'arabe pour le travail, les voyages ou les études religieuses ? Personnalisé selon vos objectifs.",
+        services_title: "Que pouvez-vous apprendre ?",
+        services_subtitle: "Quatre parcours, une enseignante, adaptés à vos objectifs.",
+        svc1_title: "Langue arabe", svc1_desc: "Arabe parlé et standard moderne — des premiers mots aux conversations fluides.", svc1_tag1: "Arabe égyptien", svc1_tag2: "Grammaire",
+        svc2_title: "Lecture du Coran", svc2_desc: "Apprenez à lire le Coran avec confiance — prononciation correcte et fluidité.", svc2_tag1: "Règles du Tajweed", svc2_tag2: "Fluidité",
+        svc3_title: "Tajweed et récitation", svc3_desc: "Maîtrisez l'art de la récitation magnifique du Coran avec un guide pas à pas.", svc3_tag1: "Règles", svc3_tag2: "Pratique",
+        svc4_title: "Arabe pour enfants", svc4_desc: "Cours amusants basés sur des jeux qui font aimer l'arabe et le Coran aux enfants.", svc4_tag1: "6+ ans", svc4_tag2: "Interactif",
+        methods_title: "Comment j'enseigne",
+        methods_subtitle: "Pas de manuels ennuyeux. Pas de mémorisation. Juste un apprentissage réel et agréable.",
+        m1_title: "Jeux interactifs", m1_desc: "Wordwall, Quizizz et jeux personnalisés pour ancrer le vocabulaire.",
+        m2_title: "Raconter visuellement", m2_desc: "Apprenez à travers des histoires et des images — sans traduction.", m2_tag: "Méthode TPR",
+        m3_title: "Vraies conversations", m3_desc: "Jeux de rôles et scénarios réels pour utiliser l'arabe dès le premier jour.", m3_tag: "Jeux de rôles",
+        lessons_title: "À l'intérieur de mes cours en ligne",
+        lessons_subtitle: "Un aperçu d'une session Zoom typique.",
+        les1_title: "Jeux et activités interactifs", les1_desc: "Roues de vocabulaire, jeux de correspondance et quiz — tout en direct à l'écran.",
+        les2_title: "Tableaux d'apprentissage visuel", les2_desc: "Tableaux Canva colorés et cartes mémo pour chaque cours.",
+        les3_title: "Sessions Zoom en direct", les3_desc: "Partage d'écran, tableau blanc et interaction en temps réel.",
+        results_title: "Ce que mes élèves obtiennent",
+        results_subtitle: "Des résultats réels d'élèves réels — voici ce à quoi vous pouvez vous attendre.",
+        res1_title: "Conversations quotidiennes", res1_desc: "En 8-12 semaines, les élèves peuvent tenir des conversations simples en arabe.",
+        res2_title: "Lire le Coran", res2_desc: "Les élèves apprennent à lire l'arabe couramment et à réciter avec un Tajweed correct.",
+        res3_title: "Retenir le vocabulaire", res3_desc: "Jeux interactifs et répétition espacée pour ancrer les mots à long terme.",
+        res4_title: "Confiance en soi", res4_desc: "Les élèves surmontent la peur de parler et commencent à apprécier l'arabe.",
+        reviews_title: "Ce que disent les élèves",
+        reviews_subtitle: "Avis vérifiés d'élèves du monde entier.",
+        rev1_text: '"Al-Zahraa rend l\'apprentissage de l\'arabe tellement amusant ! Les jeux et activités interactives me maintiennent engagée. J\'ai appris plus en 3 mois qu\'en une année d\'étude autonome."',
+        rev1_meta: "États-Unis — Apprentissage de l'arabe",
+        rev2_text: '"La meilleure enseignante d\'arabe que j\'ai trouvée ! Patiente, créative et sait vraiment comment expliquer les choses. Ma récitation du Coran s\'est tellement améliorée."',
+        rev2_meta: "Canada — Coran et Tajweed",
+        rev3_text: '"Ma fille adore ses cours d\'arabe ! Les jeux la gardent enthousiaste et elle apprend si vite. Le meilleur investissement dans son éducation."',
+        rev3_meta: "Allemagne — Arabe pour enfants",
+        rev4_text: '"J\'ai commencé en tant que débutant complet et maintenant je peux lire l\'arabe et tenir des conversations de base. Les méthodes visuelles fonctionnent vraiment !"',
+        rev4_meta: "Royaume-Uni — Arabe pour débutants",
+        verified: "Élève vérifié",
+        pricing_title: "Tarifs simples et transparents",
+        pricing_subtitle: "Commencez par un essai gratuit. Sans engagement.",
+        p1_title: "Essai gratuit", p1_sub: "30 minutes — Gratuit", p1_price: "GRATUIT", p1_note: "Une seule fois",
+        p1_f1: "Session Zoom de 30 min", p1_f2: "Évaluation du niveau", p1_f3: "Plan d'apprentissage personnalisé", p1_cta: "Réserver un essai",
+        p2_badge: "Le plus populaire", p2_title: "Pack 4 cours", p2_sub: "4 × 50 minutes", p2_price: "40$", p2_note: "4 × 50 min",
+        p2_f1: "4 sessions Zoom × 50 min", p2_f2: "Fiches PDF personnalisées", p2_f3: "Devoirs Wordwall", p2_f4: "Enregistrements", p2_f5: "Support Telegram entre les cours", p2_cta: "Commencer",
+        p3_title: "Pack 8 cours", p3_sub: "8 × 50 minutes", p3_price: "70$", p3_note: "8 × 50 min",
+        p3_f1: "Tout dans le pack 4 cours", p3_f2: "Planification prioritaire", p3_f3: "Matériel supplémentaire", p3_f4: "Rapport de suivi", p3_f5: "Certificat", p3_cta: "Meilleure valeur",
+        guarantee: "Tous les packs incluent une garantie de remboursement après le premier cours.",
+        trial_title: "Que se passe-t-il pendant l'essai gratuit ?",
+        trial_subtitle: "30 minutes qui vont changer votre façon de voir l'apprentissage de l'arabe.",
+        step1_title: "Réservez votre créneau", step1_desc: "Choisissez un moment qui vous convient via WhatsApp ou Calendly.",
+        step2_title: "Rencontre sur Zoom", step2_desc: "On discute 5 minutes pour que je comprenne vos objectifs.",
+        step3_title: "Essayez un mini-cours", step3_desc: "Découvrez mon style d'enseignement avec un mini-cours amusant et interactif.",
+        step4_title: "Recevez votre plan", step4_desc: "Obtenez un parcours d'apprentissage personnalisé — pas de pression, juste de la clarté.",
+        trial_cta: "Réserver un essai gratuit sur WhatsApp",
+        faq_title: "Questions fréquentes",
+        faq_subtitle: "Réponses rapides aux questions courantes.",
+        faq_q1: "Je suis débutant complet. Puis-je commencer ?",
+        faq_a1: "Absolument ! Je me spécialise dans l'enseignement aux débutants. On commence avec des lettres de base, des mots simples et des conversations faciles dès le premier cours.",
+        faq_q2: "Quelle est la différence entre l'arabe standard et l'arabe égyptien ?",
+        faq_a2: "L'arabe standard est utilisé dans les livres, les journaux et les contextes formels. L'arabe égyptien est le dialecte parlé au quotidien en Égypte et dans le monde arabe. J'enseigne les deux — ou l'un ou l'autre selon vos objectifs.",
+        faq_q3: "Enseignez-vous aux enfants ?",
+        faq_a3: "Oui ! J'enseigne aux enfants de 6 ans et plus avec des jeux interactifs, des histoires et des activités visuelles qui les gardent engagés et enthousiastes.",
+        faq_q4: "Combien de temps pour parler arabe ?",
+        faq_a4: "Avec des cours réguliers (2-3 fois par semaine), la plupart des élèves tiennent des conversations simples en 8-12 semaines.",
+        faq_q5: "Enseignez-vous le Coran et le Tajweed ?",
+        faq_a5: "Oui ! J'enseigne la lecture du Coran avec les règles du Tajweed, de la prononciation de base à la récitation avancée. C'est l'une de mes spécialités.",
+        faq_q6: "Puis-je reporter des cours ?",
+        faq_a6: "Oui, vous pouvez reporter n'importe quel cours jusqu'à 24 heures à l'avance — sans questions.",
+        cta_title: "Prêt à commencer votre voyage en arabe ?",
+        cta_desc: "Réservez votre cours d'essai gratuit aujourd'hui. Sans engagement, sans carte de crédit — juste 30 minutes d'apprentissage amusant et interactif.",
+        cta_btn: "Réserver un essai gratuit sur WhatsApp",
+        footer_desc: "Enseigner l'arabe et le Coran à des élèves du monde entier grâce à des méthodes interactives, amusantes et efficaces.",
+        footer_quick: "Liens rapides", footer_services: "Services", footer_contact: "Contact",
+        footer_location: "",
+        footer_copy: "\u00a9 2024 Al-Zahraa Saeed. Tous droits réservés."
+    }
+};
+
+// ===== LANGUAGE SWITCHER =====
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === lang) btn.classList.add('active');
+    });
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+    document.title = lang === 'ar' ? 'الزهراء سعيد | معلمة العربية والقرآن' :
+                     lang === 'fr' ? 'Al-Zahraa Saeed | Enseignante d\'arabe et du Coran' :
+                     'Al-Zahraa Saeed | Online Arabic & Quran Teacher';
+}
+
+// ===== FAQ TOGGLE =====
+function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+        i.querySelector('.faq-answer').style.maxHeight = '0';
+    });
+    if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+}
+
+// ===== MOBILE NAV =====
+function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('active');
+}
+
+// ===== SCROLL ANIMATIONS =====
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ===== NAVBAR SHADOW ON SCROLL =====
+window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    navbar.style.boxShadow = window.scrollY > 10 ? 'var(--shadow-sm)' : 'none';
+});
+
+// ===== INIT =====
+setLanguage(currentLang);
+</script>
+</body>
+</html>
